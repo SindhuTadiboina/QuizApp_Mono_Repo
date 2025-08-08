@@ -13,10 +13,10 @@ import lombok.extern.slf4j.Slf4j;
 public class LoggingAspect {
 
 	//
-	@Before("execution(* com.example.demo.controllers.UserController.addUser(..))")
-	public void logBeforeAddUser(JoinPoint joinpoint) 
-	{
-		log.warn("loging something before addnewuser endpoint"+joinpoint.getArgs());
-	}
+	@Before("execution(* com.wipro.sindhu.controllers.QuestionController.addQuestion(..))")
+public void logBeforeAddQuestion(JoinPoint joinpoint) {
+    log.warn("Logging before addQuestion endpoint: " + joinpoint.getArgs());
+}
+
 	
 }
