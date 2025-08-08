@@ -63,7 +63,7 @@ public class QuizService {
 
 	        for (Response response : responses) {
 	            for (Question question : questions) {
-	                if (question.getId() == response.getId()) {
+	                if (question.getId().equals((long) response.getId())) {
 	                    if (question.getCorrectAnswer().equalsIgnoreCase(response.getUserAnswer())) {
 	                    	rightAnswerScore++;
 	                    }
@@ -73,7 +73,5 @@ public class QuizService {
 	        }
 
 	        return rightAnswerScore;
-	    }
-	
-	
+	    }	
 }
